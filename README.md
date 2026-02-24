@@ -17,6 +17,15 @@ This section covers environment setup, how to train the model, and how to run th
 pip install -r requirements.txt
 ```
 
+### Data & model storage (local only)
+
+Training data and the trained model are **not** in this repo (they are ignored because of size). You need to **store them locally** on your machine:
+
+- **Training data** — After running `datafetch.py`, keep the downloaded datasets in your chosen directory (e.g. under `src` or a separate `data/` folder).
+- **Saved model** — After training, the checkpoint is saved as `saved_best` (and/or `saved_best.h5`). Keep these files locally; they are required to run the app with `-m`.
+
+Do not commit these folders/files to the repo; they are listed in `.gitignore`.
+
 ### Training the Network
 
 1. **Download datasets** (from the `src` directory). Training and evaluation data are fetched in parallel; this can take around an hour.
