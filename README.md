@@ -72,7 +72,7 @@ The idea is to train a network that takes **two images** and predicts whether th
 
 Simply concatenating the two images and feeding them into one network would use different weights for each input, which breaks symmetry. A better design is to use **two identical subnetworks with shared weights** (the “twins”), process both images through them, and feed their **absolute difference** into a linear classifier. That shared-weight, twin architecture is the Siamese network—two identical branches joined at the head.
 
-![Siamese Network](https://github.com/aebroyx/Face-Recognition-Siamese-Network/blob/master/screenshots/siamese.png)
+![Siamese Network](https://github.com/aebroyx/Facial-Recognition-Siamese-NN/blob/master/screenshots/siamese.png)
 
 The final output is passed through a **sigmoid** so it lies in [0, 1]. Targets are \(t = 1\) when the two images share a class and \(t = 0\) otherwise. Training uses **binary cross-entropy** between predictions and targets, plus an **L2 weight decay** term to favor smaller, less noisy weights and better generalization.
 
@@ -86,7 +86,7 @@ For a one-shot task, the Siamese net compares the test image to every image in t
 
 ## License
 
-This project is licensed under the MIT License — see [LICENSE.md](https://github.com/aebroyx/Face-Recognition-Siamese-Network/blob/master/LICENSE) for details.
+This project is licensed under the MIT License — see [LICENSE.md](https://github.com/aebroyx/Facial-Recognition-Siamese-NN/blob/master/LICENSE) for details.
 
 ## Acknowledgements
 
